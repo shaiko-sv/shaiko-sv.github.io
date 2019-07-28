@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
-@widthMain: 1920px;
+@widthMain: 1366px;
     @colorBackground: #f7f7f7;
     @colorHeader: #344eff;
     @colorLight: #fff;
 @fontMain: 'Ubuntu', sans-serif;
+@fontSize: 1rem;
     @marginMain: ;
-@paddingMain: 130px;
+@paddingMain: (@widthMain * 0.05);
+    @lineHeigth: (@fontSize * 1.1);
 * {
     outline: 1px dashed gray;
     margin: 0;
@@ -15,7 +17,7 @@ html {
     background-color: #fcfcfc;
     max-width: @widthMain;
     margin: 0 auto;
-    font: 400 1rem/1.1rem @fontMain;
+    font: 400 10px/11px @fontMain;
 }
 body {
     background-color: @colorBackground;
@@ -39,12 +41,12 @@ header {
         border-radius: 50%;
     }
     div {
-        font-size: 2.5rem;
-        line-height: 5rem;
+        font-size: @fontSize * 2.5;
+        line-height: @lineHeigth * 4;
     }
     address {
-        font-size: 1.5rem;
-        line-height: 2rem;
+        font-size: @fontSize * 1.5;
+        line-height: @lineHeigth * 2;
         :not(:last-child) {
             margin-bottom: 10px;
             }
@@ -70,6 +72,6 @@ footer {
     align-items: center;
     color: @colorLight;
     background-color: @colorHeader;
-    font-size: .7rem;
-    line-height: 1rem;
+    font-size: @fontSize;
+    line-height: @lineHeigth;
 }
