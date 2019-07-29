@@ -1,0 +1,136 @@
+@outlineTest: 1px solid gray;
+
+/* width */
+@widthAll: 1920px;
+
+/* height */
+@heightHeader: 163px;
+
+/* colors */
+@backColor: #f7f7f7;
+
+/* fonts */
+@font1: Arial;
+@font2: Poppins;
+@font2-light: PoppinsLight;
+@font3: RobotoCondensed;
+@font3-light: RobotoCondensedLight;
+
+@font-face {
+	font-family: 'Arial';
+	src: local('Arial'),
+	     url('../fonts/Arial.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'PoppinsLight';
+	src: local('Poppins'),
+	     url('../fonts/Poppins-Light.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: local('Poppins'),
+	     url('../fonts/Poppins-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'RobotoCondensedLight';
+	src: local('RobotoCondensed'),
+	     url('../fonts/RobotoCondensed-Light.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'RobotoCondensed';
+	src: local('RobotoCondensed'),
+	     url('../fonts/RobotoCondensed-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: @outlineTest;
+}
+
+html,
+body {
+    background-color: @backColor;
+    max-width: @widthAll;
+}
+
+.arial {
+    font-family: @font1;
+}
+
+.poppinsLight {
+    font-family: @font2-light;
+}
+
+.poppins {
+    font-family: @font2;
+}
+
+.robotoCondensedLight {
+    font-family: @font3-light;
+}
+
+.robotoCondensed {
+    font-family: @font3;
+}
+/*
+.arrow {
+    background-image: url(../img/arrow.png);
+    background-color: @backColor;
+    background-position: center;
+    background-repeat: no-repeat;    
+    background-size: cover;
+
+    a img {
+        width: 3%; 
+    }
+*/
+
+div.topArrow {
+    position: fixed; /* Фиксированное положение */ 
+    right: @widthAll / 50; /* Расстояние от правого края окна браузера */
+    top: 85%; /* Расстояние сверху */
+    width: 5%;
+    div {
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%; /*Отношение высоте к ширине*/
+        
+        div {
+            position: absolute;
+            width:100%;
+            height:100%;
+/*
+            background-image: url(../img/arrow.png);
+            background-color: @backColor;
+            background-position: center;
+            background-repeat: no-repeat;    
+            background-size: cover;
+*/
+            a img {
+                width: 90%;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .arrow {
+        
+  }
+}
