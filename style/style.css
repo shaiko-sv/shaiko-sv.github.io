@@ -7,7 +7,7 @@
 html {
   background-color: #fcfcfc;
   max-width: 1366px;
-  min-width: 410px;
+  min-width: 430px;
   margin: 0 auto;
   font: 400 10px/11px 'Ubuntu', sans-serif;
 }
@@ -17,6 +17,18 @@ body {
   grid-template-columns: 1.5fr 2.5fr;
   grid-template-rows: minmax(430px, 1fr) minmax(100vh, 3fr) 30px;
   grid-template-areas: "header header" "aside  main" "footer footer";
+}
+@media (max-width: 1150px) {
+  body {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 860px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(430px, 1fr) minmax(100vh, auto) minmax(100vh, auto) 30px;
+    grid-template-areas: "header" "main" "aside" "footer";
+  }
 }
 header {
   min-width: 341.7px;
@@ -186,18 +198,47 @@ main {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 1150px) {
+  .works {
+    flex-direction: column;
+  }
+}
 .works .work {
   width: 45%;
   height: 25vh;
   margin-top: 4rem;
 }
+@media (max-width: 1150px) {
+  .works .work {
+    width: 100%;
+    height: 50vh;
+  }
+}
+@media (max-width: 860px) {
+  .works .work {
+    height: 100vh;
+  }
+}
+.works img {
+  width: 100%;
+  object-fit: cover;
+  height: 65%;
+  object-position: left top;
+}
+@media (max-width: 860px) {
+  .works img {
+    object-position: center center;
+  }
+}
 .works h3 {
-  font-size: 3rem;
-  line-height: 3.5rem;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-top: 5px;
 }
 .works p {
-  font-size: 2.2rem;
-  line-height: 2.5rem;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  margin-top: 5px;
 }
 footer {
   grid-area: footer;
