@@ -7,6 +7,7 @@
 html {
   background-color: #fcfcfc;
   max-width: 1366px;
+  min-width: 410px;
   margin: 0 auto;
   font: 400 10px/11px 'Ubuntu', sans-serif;
 }
@@ -18,6 +19,7 @@ body {
   grid-template-areas: "header header" "aside  main" "footer footer";
 }
 header {
+  min-width: 341.7px;
   padding: 68.3px;
   color: #ffffff;
   background-color: #344eff;
@@ -29,14 +31,18 @@ header {
 header img[alt='Personal photo'] {
   max-height: 240px;
   border-radius: 50%;
+  grid-area: photo;
 }
 header div {
   font-size: 2.5rem;
   line-height: 4.4rem;
+  margin: 0 68.3px;
+  grid-area: name;
 }
 header address {
   font-size: 1.5rem;
   line-height: 2.2rem;
+  grid-area: address;
 }
 header address :not(:last-child) {
   margin-bottom: 10px;
@@ -47,6 +53,38 @@ header address img {
 }
 header address p {
   padding-left: 30px;
+}
+@media (max-width: 1050px) {
+  header {
+    display: grid;
+    padding: 34.15px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "photo address" "name address";
+  }
+  header div {
+    margin: 34.15px 0 0 0;
+    justify-self: center;
+  }
+  header img[alt='Personal photo'] {
+    justify-self: center;
+    object-fit: contain;
+  }
+}
+@media (max-width: 620px) {
+  header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "photo" "name" "address";
+    justify-content: center;
+  }
+  header div {
+    margin-bottom: 34.15px;
+  }
+  header address {
+    width: 200px;
+    justify-self: center;
+  }
 }
 aside {
   grid-area: aside;
