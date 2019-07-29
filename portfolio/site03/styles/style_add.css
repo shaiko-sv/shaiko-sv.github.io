@@ -1,0 +1,149 @@
+@media screen and (min-width: 769px) {
+    .plus div {
+        width: calc(50% - 8px);
+    }
+    .pluses .plus div:nth-child(odd) {
+      padding-right: 8px;
+      float: left;
+    }
+    .pluses .plus div:nth-child(even) {
+      padding-left: 8px;
+      float: right;
+    }
+    .pluses .plus div:nth-last-child(-n+2) p {
+       margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .pluses .plus div:nth-last-child(-n+1) p {
+       margin-bottom: 0;
+    }
+}
+@media screen and (min-width: 1089px) {
+    .shots article {
+        width: calc(50% - 8px);
+    }
+    .screenshots .shots article:nth-child(odd) {
+      padding-right: 8px;
+    }
+    .screenshots .shots article:nth-child(even) {
+      padding-left: 8px;
+    }
+    .screenshots .shots article:nth-last-child(-n+2) {
+       margin-bottom: 0;
+    }
+    .screenshots .shots article:nth-last-child(-n+2) p {
+       margin-bottom: 0;
+    }
+    .screenshots .shots article:nth-last-child(-n+2) img {
+       margin-bottom: 0;
+    }
+    }
+@media screen and (max-width: 1088px) {
+    .screenshots .shots article:nth-last-child(-n+1) p {
+       margin-bottom: 0;
+    }
+    .screenshots .shots article:nth-last-child(-n+1) img {
+       margin-bottom: 0;
+    }
+    .screenshots .shots article:nth-last-child(-n+1) {
+       margin-bottom: 0;
+    }
+}
+@media screen and (min-width: 769px) {
+    .review .shape {
+        width: calc(50% - 8px);
+    }
+    .reviews .review .shape:nth-child(odd) {
+        padding-right: 8px;
+    }
+    .reviews .review .shape:nth-child(even) {
+        padding-left: 8px;
+    }
+    .reviews .review .shape:nth-last-child(-n+2) {
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .reviews .review .shape:nth-last-child(-n+1) {
+       margin-bottom: 0;
+    }
+}
+/* для секции Buyit now */
+/* размер кнопки */
+.plans article button {
+    width: calc(100% - 40px);
+}
+/* для экрана шире 1088px */
+.buyItNow .plans article {
+    max-width: 300px;
+    }
+/* для экрана в диапазоне между 993 и 1087px */
+@media screen and (min-width: 993px) and (max-width: 1087px) {
+    .buyItNow .plans article {
+        width: calc(33.333333% - 30px);
+    }
+}
+/* для экрана уже 992px */
+@media screen and (max-width: 992px) {
+    .buyItNow .plans {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .buyItNow .plans article {
+        min-width: 400px;
+        margin-bottom: 20px;
+        float:none;
+    }
+    .buyItNow .plans article:nth-child(2) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .buyItNow .plans article:nth-last-child(-n+1) {
+       margin-bottom: 0;
+    }
+}
+/* медиа запрос для футера Contacts */
+@media screen and (min-width: 883px) { /* для экрана шире 993px*/
+    .contacts .flexMode .contactForm {
+        margin-right: 22px;
+    }
+    .contacts address {
+        margin-left: 22px;
+    }
+}
+@media screen and (max-width: 882px) {
+    .contacts .flexMode {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .contacts .flexMode .contactForm {
+        width: 100%;
+        margin-right: 0;
+        padding-bottom: 20px;
+    }
+    .contacts address {
+        max-width: 240px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 610px) {
+    .contacts .flexMode .contactForm {
+        margin-right: 0;
+        padding-bottom: 20px; 
+    }
+    .contacts .flexMode .contactForm input,
+    .contacts .flexMode .contactForm textarea {
+        width: calc(100% - 20px);
+    }
+    .contacts address {
+        max-width: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+    }
+}
