@@ -14,7 +14,7 @@ html {
 body {
   background-color: #f7f7f7;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1.5fr 2.5fr;
   grid-template-rows: minmax(430px, 1fr) minmax(100vh, 3fr) 30px;
   grid-template-areas: "header header" "aside  main" "footer footer";
 }
@@ -38,6 +38,7 @@ header div {
   line-height: 4.4rem;
   margin: 0 68.3px;
   grid-area: name;
+  text-align: center;
 }
 header address {
   font-size: 1.5rem;
@@ -86,11 +87,117 @@ header address p {
     justify-self: center;
   }
 }
+.brifcase {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: url(../img/brief_case_2.svg), #344eff;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 aside {
   grid-area: aside;
+  padding: 68.3px;
+  background-color: #e6e6e6;
+}
+aside > :not(:last-child) {
+  margin-bottom: 68.3px;
+}
+.newLine {
+  width: 100%;
+}
+section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+section h3 {
+  font-size: 3rem;
+  line-height: 3.3rem;
+  margin-left: 2rem;
+}
+section .interests {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+section p {
+  font-size: 2.2rem;
+  line-height: 2.5rem;
+  margin-top: 1rem;
+  text-align: justify;
+}
+section p:first-letter {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #344eff;
+}
+.interest {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.interest div {
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 7px solid #344eff;
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.interest div img {
+  width: 65%;
+}
+.interest h5 {
+  font-size: 2.5rem;
+  line-height: 2.7rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+.references {
+  margin-left: 47px;
+}
+.references .reference {
+  margin-top: 1rem;
+  color: #707070;
+  font-size: 2.2rem;
+  line-height: 3rem;
+}
+.references .reference span {
+  font-weight: 600;
+  color: #5769b0;
+}
+.awards p {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  font-weight: 600;
 }
 main {
   grid-area: main;
+  padding: 68.3px;
+}
+.works {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.works .work {
+  width: 45%;
+  height: 25vh;
+  margin-top: 4rem;
+}
+.works h3 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+.works p {
+  font-size: 2.2rem;
+  line-height: 2.5rem;
 }
 footer {
   grid-area: footer;

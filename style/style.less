@@ -23,11 +23,11 @@ html {
 body {
     background-color: @colorBackground;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1.5fr 2.5fr;
     grid-template-rows: minmax(430px, 1fr) minmax(100vh, 3fr) 30px;
     grid-template-areas: "header header"
                          "aside  main"
-                         "footer footer"
+                         "footer footer";
 }
 header {
     min-width: 410px - @paddingMain;
@@ -48,6 +48,7 @@ header {
         line-height: @lineHeigth * 4;
         margin: 0 @paddingMain;
         grid-area: name;
+        text-align: center;
     }
     address {
         font-size: @fontSize * 1.5;
@@ -96,11 +97,121 @@ header {
         }
     }
 }
+.brifcase {
+    width: @fontSize * 6;
+    height: @fontSize * 6;
+    border-radius: 50%;
+    background: url(../img/brief_case_2.svg), @colorHeader;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 aside {
     grid-area: aside;
+    padding: @paddingMain;
+    background-color: @colorBackground - #111;
+    >:not(:last-child) {
+        margin-bottom: @paddingMain;
+    }
+}
+.newLine {
+    width: 100%;
+}
+section {
+     display: flex;
+     align-items: center;
+     flex-wrap: wrap;
+    h3 {
+        font-size: @fontSize * 3;
+        line-height: @fontSize * 3.3;
+        margin-left: @fontSize * 2;
+    }
+    .interests {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    p {
+        font-size: @fontSize * 2.2;
+        line-height: @fontSize * 2.5;
+        margin-top: @fontSize;
+        text-align: justify;
+        &:first-letter {
+            text-transform: uppercase;
+            font-size: @fontSize * 3;
+            font-weight: 600;
+            color: @colorHeader;
+        }
+    }
+}
+.interest {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div {
+        border-radius: 50%;
+        background-color: @colorLight;
+        border: 7px solid @colorHeader;
+        width: @fontSize * 6;
+        height: @fontSize * 6;
+        display: flex;
+        justify-content: center;
+        margin-top: @fontSize * 2;
+        img {
+            width: 65%;
+        }
+    }
+    h5 {
+        font-size: @fontSize * 2.5;
+        line-height: @fontSize * 2.7;
+        text-align: center;
+        margin-top: @fontSize;
+    }
+}
+.references {
+     margin-left: 47px;
+    .reference {
+        margin-top: @fontSize;
+        color: #707070;
+        font-size: @fontSize * 2.2;
+        line-height: @fontSize * 3;
+        span {
+            font-weight: 600;
+            color: #5769b0;
+        }
+    }
+}
+.awards {
+    p {
+        font-size: @fontSize * 2.5;
+        line-height: @fontSize * 3.5;
+        font-weight: 600;
+    }
 }
 main {
     grid-area: main;
+    padding: @paddingMain;
+}
+.works {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .work {
+        width: 45%;
+        height: 25vh;
+        margin-top: @fontSize * 4;
+    }
+    img {
+    }
+    h3 {
+        font-size: @fontSize * 3;
+        line-height: @fontSize * 3.5;
+    }
+    p {
+        font-size: @fontSize * 2.2;
+        line-height: @fontSize * 2.5;
+    }
 }
 footer {
     grid-area: footer;
